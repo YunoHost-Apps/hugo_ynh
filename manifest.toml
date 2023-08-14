@@ -1,0 +1,70 @@
+packaging_format = 2
+
+id = "hugo"
+name = "Pelican"
+description.en = "Static Site Generator"
+description.fr = "Générateur de blog statique"
+
+version = "0.117.0~ynh1"
+
+maintainers = ["tituspijean"]
+
+[upstream]
+license = "Apache-2.0"
+website = "https://gohugo.io"
+admindoc = "https://gohugo.io/documentation"
+code = "https://github.com/gohugoio/hugo"
+
+[integration]
+yunohost = ">= 11.2"
+architectures = ["amd64", "arm64"]
+multi_instance = true
+ldap = false
+sso = false
+disk = "50M"
+ram.build = "50M"
+ram.runtime = "50M"
+
+[install]
+    [install.domain]
+    type = "domain"
+
+    [install.path]
+    type = "path"
+    default = "/hugo"
+
+    [install.init_main_permission]
+    type = "group"
+    default = "visitors"
+
+    [install.name]
+    ask.en = "Choose a directory name for your site (used for `hugo new site name` command)"
+    ask.fr = "Choisissez le nom de répertoire pour votre site (utilisé dans la commande `hugo new site nom`)"
+    type = "string"
+    default = "site"
+
+[resources]
+
+    [resources.sources.main]
+    amd64.url = "https://github.com/gohugoio/hugo/releases/download/v0.117.0/hugo_extended_0.117.0_linux-amd64.tar.gz"
+    amd64.sha256 = "5d136420680ce3ccd6b1f1824332f8e2c97a802890e7b25d14f7e5f343f724a9"
+    arm64.url = "https://github.com/gohugoio/hugo/releases/download/v0.117.0/hugo_extended_0.117.0_linux-arm64.tar.gz"
+    arm64.sha256 = "64f47587cfada4e5d0467199bca8841c91bc820e68604393f5abe04e8c90f0f5"
+
+    autoupdate.strategy = "latest_github_release"
+    autoupdate.asset.amd64 = ".*amd64.tar.gz"
+    autoupdate.asset.armhf = ".*arm64.tar.gz"
+
+    [resources.system_user]
+    allow_ssh = true
+    allow_sftp = true
+
+    [resources.install_dir]
+
+    [resources.permissions]
+    main.url = "/"
+
+    [resources.ports]
+
+    [resources.apt]
+    packages = "hugo"
