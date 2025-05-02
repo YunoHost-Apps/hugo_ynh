@@ -5,7 +5,7 @@ name = "Hugo"
 description.en = "Static Site Generator"
 description.fr = "Générateur de blog statique"
 
-version = "0.147.1~ynh1"
+version = "0.117.0~ynh1"
 
 maintainers = ["tituspijean"]
 
@@ -16,8 +16,7 @@ admindoc = "https://gohugo.io/documentation"
 code = "https://github.com/gohugoio/hugo"
 
 [integration]
-yunohost = ">= 12.0.9"
-helpers_version = "2.1"
+yunohost = ">= 11.2"
 architectures = ["amd64", "arm64"]
 multi_instance = true
 
@@ -40,7 +39,7 @@ ram.runtime = "50M"
     type = "group"
     default = "visitors"
 
-    [install.site_name]
+    [install.name]
     ask.en = "Choose a directory name for your site (used for `hugo new site name` command)"
     ask.fr = "Choisissez le nom de répertoire pour votre site (utilisé dans la commande `hugo new site nom`)"
     type = "string"
@@ -49,10 +48,10 @@ ram.runtime = "50M"
 [resources]
 
     [resources.sources.main]
-    amd64.url = "https://github.com/gohugoio/hugo/releases/download/v0.147.1/hugo_extended_0.147.1_linux-amd64.tar.gz"
-    amd64.sha256 = "7822d40360c8123a624ac8f3e4305b83908dd76cc7885ae4b00e985dac0b920f"
-    arm64.url = "https://github.com/gohugoio/hugo/releases/download/v0.147.1/hugo_extended_0.147.1_linux-arm64.tar.gz"
-    arm64.sha256 = "c61466b4fda9bcfaba34a7e89dca21dc5a9d8f2fcf8372d101c6ffa7d163d7a9"
+    amd64.url = "https://github.com/gohugoio/hugo/releases/download/v0.117.0/hugo_extended_0.117.0_linux-amd64.tar.gz"
+    amd64.sha256 = "5d136420680ce3ccd6b1f1824332f8e2c97a802890e7b25d14f7e5f343f724a9"
+    arm64.url = "https://github.com/gohugoio/hugo/releases/download/v0.117.0/hugo_extended_0.117.0_linux-arm64.tar.gz"
+    arm64.sha256 = "64f47587cfada4e5d0467199bca8841c91bc820e68604393f5abe04e8c90f0f5"
 
     autoupdate.strategy = "latest_github_release"
     autoupdate.asset.amd64 = ".*amd64.tar.gz"
@@ -63,7 +62,6 @@ ram.runtime = "50M"
     allow_sftp = true
 
     [resources.install_dir]
-    group = "www-data:r-x"
 
     [resources.permissions]
     main.url = "/"
