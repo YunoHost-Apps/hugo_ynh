@@ -5,8 +5,6 @@ source ../settings/scripts/_common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
-# STANDARD RESTORATION STEPS
-#=================================================
 # RESTORE THE SYSTEM CONFIGURATIONS
 #=================================================
 ynh_script_progression "Restoring system configurations related to $app..."
@@ -24,14 +22,13 @@ ynh_script_progression "Restoring the app main directory..."
 
 ynh_restore "$install_dir"
 
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chmod -R o-rwx "$install_dir"
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown -R $app:$app "$install_dir"
 #=================================================
 # RELOAD SERVICES
 #=================================================
 ynh_script_progression "Reloading services.."
 
 ynh_systemctl --service=nginx --action=reload
+
 ynh_systemctl --service=$app --action="start"
 
 #=================================================
