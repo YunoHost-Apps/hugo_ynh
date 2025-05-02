@@ -6,7 +6,7 @@ Type=simple
 User=__APP__
 Group=__APP__
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=hugo server --contentDir __INSTALL_DIR__/__NAME__ --port __PORT__ --watch
+ExecStart=hugo server --contentDir __INSTALL_DIR__/__APP__ --port __PORT__ --watch
 StandardOutput=journal
 StandardError=inherit
 
