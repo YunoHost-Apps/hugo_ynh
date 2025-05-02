@@ -49,6 +49,7 @@ ram.runtime = "50M"
 [resources]
 
     [resources.sources.main]
+    in_subdir = false
     amd64.url = "https://github.com/gohugoio/hugo/releases/download/v0.147.1/hugo_extended_0.147.1_linux-amd64.tar.gz"
     amd64.sha256 = "7822d40360c8123a624ac8f3e4305b83908dd76cc7885ae4b00e985dac0b920f"
     arm64.url = "https://github.com/gohugoio/hugo/releases/download/v0.147.1/hugo_extended_0.147.1_linux-arm64.tar.gz"
