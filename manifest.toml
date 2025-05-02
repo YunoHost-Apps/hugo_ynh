@@ -40,7 +40,7 @@ ram.runtime = "50M"
     type = "group"
     default = "visitors"
 
-    [install.name]
+    [install.site_name]
     ask.en = "Choose a directory name for your site (used for `hugo new site name` command)"
     ask.fr = "Choisissez le nom de répertoire pour votre site (utilisé dans la commande `hugo new site nom`)"
     type = "string"

@@ -6,12 +6,10 @@ source /usr/share/yunohost/helpers
 #=================================================
 # SPECIFIC SETUP
 #=================================================
-# BUILD APP
-#=================================================
 ynh_script_progression "Building app..."
 
 pushd $install_dir
-	hugo new site $name
+	hugo new site $site_name
 popd
 
 #=================================================
