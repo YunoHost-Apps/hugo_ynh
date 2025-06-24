@@ -70,6 +70,3 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.ports]
-
-    #[resources.apt]
-    #packages = "hugo"
