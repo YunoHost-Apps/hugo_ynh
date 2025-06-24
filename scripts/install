@@ -39,7 +39,8 @@ chown -R "$app:www-data" "$install_dir"
 ynh_script_progression "Building app..."
 
 pushd $install_dir
-	./hugo new posts/some-post.md
+	mkdir content/fr
+	./hugo new content/fr/about.md
 popd
 
 #=================================================
