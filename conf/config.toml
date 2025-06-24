@@ -1,0 +1,3 @@
+baseURL = "https://__DOMAIN__"
+title = "YunoHost"
+languageCode = "fr"

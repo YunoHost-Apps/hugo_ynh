@@ -20,7 +20,18 @@ ynh_script_progression "Building app..."
 
 pushd $install_dir
 	./hugo new site $site_name
+	./hugo new posts/some-post.md
 popd
+
+#=================================================
+# APP INITIAL CONFIGURATION
+#=================================================
+ynh_script_progression "Adding $app's configuration files..."
+
+ynh_config_add --template="/config.toml" --destination="$install_dir/$site_name/config.toml"
+
+chmod -R 750 "$install_dir"
+chown -R "$app:www-data" "$install_dir"
 
 #=================================================
 # SYSTEM CONFIGURATION

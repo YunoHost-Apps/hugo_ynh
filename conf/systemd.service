@@ -1,5 +1,5 @@
 [Unit]
-Description=__APP__ monitor, to automatically rebuild your website
+Description=Hugo monitor, to automatically rebuild your website
 
 [Service]
 Type=simple
