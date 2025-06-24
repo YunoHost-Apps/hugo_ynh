@@ -4,12 +4,22 @@ source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
+# DOWNLOAD, CHECK AND UNPACK SOURCE
+#=================================================
+ynh_script_progression "Setting up source files..."
+
+# Download, check integrity, uncompress and patch the source from manifest.toml
+ynh_setup_source --dest_dir="$install_dir"
+
+chmod +x "$install_dir/hugo"
+
+#=================================================
 # SPECIFIC SETUP
 #=================================================
 ynh_script_progression "Building app..."
 
 pushd $install_dir
-	hugo new site $site_name
+	./hugo new site $site_name
 popd
 
 #=================================================
