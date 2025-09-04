@@ -5,7 +5,7 @@ name = "Hugo"
 description.en = "Static Site Generator"
 description.fr = "Générateur de blog statique"
 
-version = "0.147.1~ynh1"
+version = "0.149.1~ynh1"
 
 maintainers = ["tituspijean"]
 
@@ -49,10 +49,10 @@ ram.runtime = "50M"
 [resources]
 
     [resources.sources.main]
-    amd64.url = "https://github.com/gohugoio/hugo/releases/download/v0.147.1/hugo_extended_0.147.1_linux-amd64.tar.gz"
-    amd64.sha256 = "7822d40360c8123a624ac8f3e4305b83908dd76cc7885ae4b00e985dac0b920f"
-    arm64.url = "https://github.com/gohugoio/hugo/releases/download/v0.147.1/hugo_extended_0.147.1_linux-arm64.tar.gz"
-    arm64.sha256 = "c61466b4fda9bcfaba34a7e89dca21dc5a9d8f2fcf8372d101c6ffa7d163d7a9"
+    amd64.url = "https://github.com/gohugoio/hugo/releases/download/v0.149.1/hugo_extended_0.149.1_linux-amd64.tar.gz"
+    amd64.sha256 = "8e61340fb84cd031097d2cfd4233ad9077576975a4ce0189e5ba1120e3cad553"
+    arm64.url = "https://github.com/gohugoio/hugo/releases/download/v0.149.1/hugo_extended_0.149.1_linux-arm64.tar.gz"
+    arm64.sha256 = "f800b933687354a462dc9f69e4e3fac28c9d754455556ea911d77f456616d92b"
 
     autoupdate.strategy = "latest_github_release"
     autoupdate.asset.amd64 = ".*amd64.tar.gz"
