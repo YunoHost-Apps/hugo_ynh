@@ -1,4 +1,4 @@
 baseURL = 'https://__DOMAIN____PATH__'
-locale = 'en-us'
-title = 'My New Hugo Project'
+locale = '__LANGUAGE__'
+title = 'Mon super projet avec Hugo'
 theme = 'ananke'
