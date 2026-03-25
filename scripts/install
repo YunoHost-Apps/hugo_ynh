@@ -24,7 +24,7 @@ popd
 
 mkdir -p "$install_dir/public"
 
-ynh_setup_source --dest_dir="$install_dir/$site_name/themes/" --source_id="themes"
+ynh_setup_source --dest_dir="$install_dir/$site_name/themes/ananke" --source_id="themes"
 
 echo "theme = 'ananke'" >> "$install_dir/$site_name/hugo.toml"
 
