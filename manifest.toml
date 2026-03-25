@@ -60,11 +60,9 @@ ram.runtime = "50M"
     autoupdate.asset.armhf = ".*arm64.tar.gz"
 
     [resources.sources.themes]
-    in_subdir = true
     url = "https://github.com/theNewDynamic/gohugo-theme-ananke/archive/refs/tags/v2.12.1.tar.gz"
     sha256 = "e19c3d5723f5f7377f3c4b6aeed851d239ad63657ac3e76e4220e3c3fb4eda6f"
     format = "tar.gz"
-    rename = "ananke"
     autoupdate.strategy = "latest_github_release"
 
     [resources.system_user]
