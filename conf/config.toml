@@ -1,4 +1,4 @@
-baseURL = 'https://__DOMAIN__/__PATH__'
+baseURL = 'https://__DOMAIN____PATH__'
 locale = 'en-us'
 title = 'My New Hugo Project'
 theme = 'ananke'
