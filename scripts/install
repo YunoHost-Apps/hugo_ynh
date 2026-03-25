@@ -26,7 +26,7 @@ mkdir -p "$install_dir/public"
 
 ynh_setup_source --dest_dir="$install_dir/$site_name/themes/ananke" --source_id="themes"
 
-echo "theme = 'ananke'" >> "$install_dir/$site_name/hugo.toml"
+ynh_config_add --template="config.toml" --destination="$install_dir/hugo.toml"
 
 chown $app:www-data -R "$install_dir/"
 
