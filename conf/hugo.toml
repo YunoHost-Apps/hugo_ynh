@@ -1,0 +1,3 @@
+baseURL = 'https://__DOMAIN__/__PATH__'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
