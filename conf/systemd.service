@@ -6,7 +6,7 @@ Type=simple
 User=__APP__
 Group=__APP__
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=__INSTALL_DIR__/hugo server --contentDir __INSTALL_DIR__/__APP__ --port __PORT__ --watch
+ExecStart=__INSTALL_DIR__/hugo server --config __INSTALL_DIR__/__SITE_NAME__/config.toml --port __PORT__ --watch
 StandardOutput=journal
 StandardError=inherit
 
