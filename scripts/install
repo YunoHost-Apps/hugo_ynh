@@ -22,6 +22,8 @@ pushd $install_dir
 	./hugo new site $site_name
 popd
 
+chown $app:www-data -R "$install_dir/$site_name"
+
 #=================================================
 # SYSTEM CONFIGURATION
 #=================================================
