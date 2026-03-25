@@ -32,6 +32,13 @@ ram.runtime = "50M"
     [install.domain]
     type = "domain"
 
+    [install.language]
+    ask.en = "Choose the application language"
+    ask.fr = "Choisissez la langue de l'application"
+    type = "select"
+    choices = ["en", "fr"]
+    default = "fr"
+
     [install.path]
     type = "path"
     default = "/hugo"
