@@ -1,6 +1,5 @@
 #!/bin/bash
 
-source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
@@ -21,6 +20,14 @@ ynh_script_progression "Building app..."
 pushd $install_dir
 	./hugo new site $site_name
 popd
+
+mkdir -p "$install_dir/public"
+
+ynh_setup_source --dest_dir="$install_dir/$site_name/themes/ananke" --source_id="themes"
+
+ynh_config_add --template="config.toml" --destination="$install_dir/$site_name/hugo.toml"
+
+chown $app:www-data -R "$install_dir/"
 
 #=================================================
 # SYSTEM CONFIGURATION

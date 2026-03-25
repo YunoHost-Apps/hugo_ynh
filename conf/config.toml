@@ -1,0 +1,4 @@
+baseURL = 'https://__DOMAIN____PATH__'
+locale = '__LANGUAGE__'
+title = 'Mon super projet avec Hugo'
+theme = 'ananke'
