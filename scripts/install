@@ -28,7 +28,7 @@ ynh_setup_source --dest_dir="$install_dir/$site_name/themes/" --source_id="theme
 
 echo "theme = 'ananke'" >> "$install_dir/$site_name/hugo.toml"
 
-chown $app:www-data -R "$install_dir/$site_name"
+chown $app:www-data -R "$install_dir/"
 
 #=================================================
 # SYSTEM CONFIGURATION
